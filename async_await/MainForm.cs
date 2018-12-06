@@ -1,6 +1,6 @@
 using System;
 using System.Data.SqlClient;
-using System.Net.Http;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -37,6 +37,23 @@ namespace async_await
         }
 
         #endregion
+
+
+        private class HttpClient
+        {
+            public async Task<dynamic> GetAsync(string url)
+            {
+                String part1 = null;
+                String part2 = null;
+                await Task.WhenAll(
+                    Task.Run(() => part1 = "Hi!"),
+                    Task.Run(() => part2 = "Content has been moved to"),
+                    Task.Delay(200)
+                );
+                Func<Task<String>> ReadAsStringAsync = () => Task.FromResult($"{part1} {part2} <a href='{url}'>{url}</a>");
+                return new { Content = new { ReadAsStringAsync } };
+            }
+        }
 
         private async Task<string> DownloadStringV1(string url)
         {
