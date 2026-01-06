@@ -1,10 +1,10 @@
 using System;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace async_await
+namespace Deadlocks
 {
     public partial class MainForm : Form
     {
@@ -65,7 +65,8 @@ namespace async_await
 
         private string DownloadStringV3(string url)
         {
-            // bad code (?)
+            // NOT SAFE, instant deadlock when called from UI thread
+            // deadlock when called from threadpool, works fine on console
             var request = new HttpClient().GetAsync(url).Result;
             var download = request.Content.ReadAsStringAsync().Result;
             return download;
@@ -73,7 +74,8 @@ namespace async_await
 
         private async Task<string> DownloadStringV4(string url)
         {
-            // bad code (?)
+            // NOT SAFE, deadlock when called from threadpool
+            // works fine on UI thread or console main 
             var request = new HttpClient().GetAsync(url).Result;
             var download = await request.Content.ReadAsStringAsync();
             return download;
@@ -116,7 +118,7 @@ namespace async_await
             StatusFinalized();
         }
 
-        private void btnDownloadStringV2_Click(object sender, EventArgs e)
+        private void btnDownloadStringV3_Click(object sender, EventArgs e)
         {
             CurrentTest(lblDownloadStringV3);
             StatusRunning();

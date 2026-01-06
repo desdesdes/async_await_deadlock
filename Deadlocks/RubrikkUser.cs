@@ -1,4 +1,4 @@
-﻿namespace async_await
+﻿namespace Deadlocks
 {
     public class RubrikkUser
     {

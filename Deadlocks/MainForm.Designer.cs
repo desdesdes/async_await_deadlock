@@ -1,4 +1,4 @@
-namespace async_await
+namespace Deadlocks
 {
     partial class MainForm
     {
@@ -75,7 +75,7 @@ namespace async_await
             this.btnDownloadStringV2.TabIndex = 5;
             this.btnDownloadStringV2.Text = "DownloadStringV3";
             this.btnDownloadStringV2.UseVisualStyleBackColor = true;
-            this.btnDownloadStringV2.Click += new System.EventHandler(this.btnDownloadStringV2_Click);
+            this.btnDownloadStringV2.Click += new System.EventHandler(this.btnDownloadStringV3_Click);
             // 
             // lblDownloadStringV3
             // 

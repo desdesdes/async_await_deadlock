@@ -1,9 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28107.0
+# Visual Studio Version 18
+VisualStudioVersion = 18.1.11312.151 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "async_await", "async_await\async_await.csproj", "{4030A35D-21DC-4467-B6AF-459FA17E2D53}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deadlocks", "Deadlocks\Deadlocks.csproj", "{FF8B1F4D-9080-40DA-B1B9-09EB56CBC17E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4A038843-AF17-4000-A8B1-F55164F02C87}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +16,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4030A35D-21DC-4467-B6AF-459FA17E2D53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4030A35D-21DC-4467-B6AF-459FA17E2D53}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4030A35D-21DC-4467-B6AF-459FA17E2D53}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4030A35D-21DC-4467-B6AF-459FA17E2D53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF8B1F4D-9080-40DA-B1B9-09EB56CBC17E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF8B1F4D-9080-40DA-B1B9-09EB56CBC17E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF8B1F4D-9080-40DA-B1B9-09EB56CBC17E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF8B1F4D-9080-40DA-B1B9-09EB56CBC17E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
